@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Enable View Transitions API for instant page navigation */
+@view-transition {
+  navigation: auto;
+}
+
+/* Optimize rendering performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+.overflow-y-auto {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize animations for better performance */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Optimize will-change for frequently animated elements */
+.hover\:shadow-lg,
+.hover\:shadow-xl {
+  will-change: box-shadow;
+}
+
+.hover\:scale-110,
+.group-hover\:scale-110 {
+  will-change: transform;
+}
